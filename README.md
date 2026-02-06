@@ -178,7 +178,7 @@ Firmware is sent in small chunks to ensure reliability.
 
 - STM32CubeIDE
 - STM32CubeProgrammer
-- ESP32 (Arduino / ESP-IDF)
+- ESP32 (Arduino)
 - Python (Flask, Requests)
 - AWS S3 (public firmware hosting)
 
