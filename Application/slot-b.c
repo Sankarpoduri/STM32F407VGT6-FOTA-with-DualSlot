@@ -118,8 +118,8 @@ int main(void) {
 	}
 
 	spi_ready = 1;
-	/* 4. Debug: Turn on GREEN LED immediately to prove we are alive */
-	HAL_GPIO_WritePin(LED_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_SET);
+	/* 4. Debug: Turn on ORANGE LED immediately to prove we are alive */
+	HAL_GPIO_WritePin(LED_GPIO_Port, LED_ORANGE_Pin, GPIO_PIN_SET);
 
 	/* 5. Infinite Loop */
 	while (1) {
@@ -134,10 +134,10 @@ int main(void) {
 void User_Application(void) {
 	static uint32_t last_blink = 0;
 
-	// Blink Green LED every 500ms
+	// Blink ORANGE LED every 500ms
 	// This will continue running even during OTA download!
 	if (HAL_GetTick() - last_blink > 500) {
-		HAL_GPIO_TogglePin(LED_GPIO_Port, LED_GREEN_Pin);
+		HAL_GPIO_TogglePin(LED_GPIO_Port, LED_ORANGE_Pin);
 		last_blink = HAL_GetTick();
 	}
 }
